@@ -21,7 +21,7 @@ class Program
 {
     // TODO: put your real bot token here
 
-    private static readonly string BotToken =
+    private static readonly string? BotToken =
     Environment.GetEnvironmentVariable("BOT_TOKEN");
 
 
@@ -37,9 +37,14 @@ class Program
     {
         if (string.IsNullOrWhiteSpace(BotToken))
         {
-            Console.WriteLine("ERROR: BOT_TOKEN not provided.");
+            Console.WriteLine("⚠️ BOT_TOKEN not found locally.");
+            Console.WriteLine("This is normal if you only want to run the bot on Railway.");
+            Console.WriteLine("Skipping bot startup...");
+            Console.ReadLine();
             return;
         }
+
+        Console.WriteLine("BOT_TOKEN detected. Starting bot...");
 
         var botClient = new TelegramBotClient(BotToken);
 
