@@ -37,7 +37,7 @@ class Program
     {
         if (string.IsNullOrWhiteSpace(BotToken))
         {
-            Console.WriteLine("❌ ERROR: BOT_TOKEN not provided.");
+            Console.WriteLine("ERROR: BOT_TOKEN not provided.");
             return;
         }
 
