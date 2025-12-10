@@ -20,7 +20,7 @@ enum ConversationState
 class Program
 {
     // TODO: put your real bot token here
-    private const string BotToken = "8177040078:AAHaetgzv3Lf3UWBwBGtyiWdNHMm_cKc8Dw";
+    private static readonly string BotToken = Environment.GetEnvironmentVariable("8177040078:AAHaetgzv3Lf3UWBwBGtyiWdNHMm_cKc8Dw");
 
     // Base API endpoint (without term)
     private const string UserApiBaseUrl =
