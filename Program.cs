@@ -64,7 +64,7 @@ class Program
 
         var me = await botClient.GetMeAsync(cts.Token);
         Console.WriteLine($"Bot @{me.Username} is running. Press Enter to exit...");
-        Console.ReadLine();
+        //Console.ReadLine();
 
         cts.Cancel();
     }
