@@ -35,6 +35,12 @@ class Program
 
     static async Task Main()
     {
+        if (string.IsNullOrWhiteSpace(BotToken))
+        {
+            Console.WriteLine("❌ ERROR: BOT_TOKEN not provided.");
+            return;
+        }
+
         var botClient = new TelegramBotClient(BotToken);
 
         using var cts = new CancellationTokenSource();
